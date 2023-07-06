@@ -1,0 +1,270 @@
+@import "./Adobe";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.all-wrap {
+  background-image: url(../images/wave001.png);
+  background-color: #fcf2e5;
+}
+
+header {
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #58769c;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    .logo-box {
+      display: flex;
+      flex-grow: 1;
+
+      .logo {
+        width: 100px;
+        height: 50px;
+        background-image: url(../images/Ray-W.png);
+        background-size: cover;
+      }
+
+      ul {
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        li {
+          border-radius: 1rem;
+
+          &:hover {
+            box-shadow: 1px 1px 3px 1px #00000060;
+          }
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            padding: .5rem 1rem;
+            margin: 0 .5rem;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .list {
+      cursor: pointer;
+      display: none;
+      padding: 1rem;
+
+      i {
+        font-size: 1.5rem;
+        pointer-events: none;
+      }
+    }
+  }
+
+
+  .head-box {
+    width: 100%;
+    min-height: 25vh;
+    margin-top: 50px;
+    margin-bottom: 3rem;
+    background:
+      linear-gradient(120deg, #58769c 40%, transparent 30%) center center / 100% 100%,
+      url(../images/wave.jpg) center center / cover;
+    position: relative;
+
+    .head-text {
+      width: 40%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      h1 {
+        color: #dae6f8;
+        font-size: 3rem;
+        font-weight: 900;
+        text-shadow: 5px 5px 5px #082b58;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+section {
+  margin-bottom: 3rem;
+  min-height: 50vh;
+
+  .demo {
+    .demo-text {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      h1 {
+        font-weight: 900;
+      }
+
+      a {
+        color: #c42c18;
+        font-size: 1.2em;
+        font-weight: 900;
+      }
+    }
+
+    .item {
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      &:hover {
+        .item-imgbox {
+          box-shadow: 0px 0px 15px 7px #db8259a6;
+          animation: shake .8s ease-in-out infinite alternate;
+        }
+      }
+
+
+      .item-imgbox {
+        box-shadow: 3px 3px 10px 5px #e6d9c9;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+
+      .item-text {
+        padding: 1rem 3rem 4rem;
+        position: relative;
+
+        h2 {
+          font-weight: 800;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          padding: 0 1rem;
+          line-height: 2rem;
+        }
+
+
+        a {
+          text-decoration: none;
+          padding: .5rem 1rem;
+          border-radius: .5rem;
+          border: 2px solid #58769c;
+          color: #58769c;
+          font-weight: 900;
+          position: absolute;
+          right: 0;
+          bottom: 1rem;
+
+          &:hover {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            background-color: #58769c;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .copyright {
+    background-color: #6393d1;
+    background-image: url(../images/wave001.png);
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+}
+
+
+
+@media screen and (max-width:768px) {
+  header {
+    nav {
+      align-items: normal;
+
+      .logo-box {
+        display: block;
+
+        ul {
+          height: auto;
+          display: none;
+          align-items: center;
+
+          li {
+            margin: .5rem 0;
+          }
+        }
+
+      }
+
+      .list {
+        display: block;
+      }
+    }
+
+    .head-box {
+      .head-text {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  section {
+    .demo {
+      .item {
+        border-bottom: 1px solid #093f85;
+
+        .item-imgbox {
+          margin-bottom: 1.5rem;
+        }
+
+        .item-text {
+          padding: 1rem .5rem 4rem;
+
+          p {
+            padding: 0 .3rem;
+            line-height: 2rem;
+          }
+
+          a {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+}

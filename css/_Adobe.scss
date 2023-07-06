@@ -1,0 +1,37 @@
+
+section{
+  .demo-A{
+    margin-bottom: 4rem;
+    h1{
+      text-align: center;
+      font-weight: 900;
+      font-size: 3rem;
+      color: #000000;
+      text-shadow: 0px 0px 15px #8ebfff;
+      margin-bottom: 2rem;
+    }
+    .item{
+      margin-bottom: 3rem;
+      .mycard{
+        background-color: #18181860;
+        border: none;
+        .invisible{
+          display: none;
+        }
+
+        h5{
+          text-align: center;
+          font-weight: 900;
+          font-size: 1.3rem;
+          color: #ececec;
+          text-shadow: 2px 2px 3px #032450;
+
+        }
+      }
+  
+    }
+  }
+}
+
+
+

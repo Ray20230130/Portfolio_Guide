@@ -1,0 +1,279 @@
+section .demo-A {
+  margin-bottom: 4rem;
+}
+section .demo-A h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #000000;
+  text-shadow: 0px 0px 15px #8ebfff;
+  margin-bottom: 2rem;
+}
+section .demo-A .item {
+  margin-bottom: 3rem;
+}
+section .demo-A .item .mycard {
+  background-color: rgba(24, 24, 24, 0.3764705882);
+  border: none;
+}
+section .demo-A .item .mycard .invisible {
+  display: none;
+}
+section .demo-A .item .mycard h5 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: #ececec;
+  text-shadow: 2px 2px 3px #032450;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.all-wrap {
+  background-image: url(../images/wave001.png);
+  background-color: #fcf2e5;
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  background-color: #58769c;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+header nav .logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header nav .logo-box .logo {
+  width: 100px;
+  height: 50px;
+  background-image: url(../images/Ray-W.png);
+  background-size: cover;
+}
+header nav .logo-box ul {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .logo-box ul li {
+  border-radius: 1rem;
+}
+header nav .logo-box ul li:hover {
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3764705882);
+          box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3764705882);
+}
+header nav .logo-box ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .list {
+  cursor: pointer;
+  display: none;
+  padding: 1rem;
+}
+header nav .list i {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+header .head-box {
+  width: 100%;
+  min-height: 25vh;
+  margin-top: 50px;
+  margin-bottom: 3rem;
+  background: linear-gradient(120deg, #58769c 40%, transparent 30%) center center/100% 100%, url(../images/wave.jpg) center center/cover;
+  position: relative;
+}
+header .head-box .head-text {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+header .head-box .head-text h1 {
+  color: #dae6f8;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 5px 5px 5px #082b58;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+section {
+  margin-bottom: 3rem;
+  min-height: 50vh;
+}
+section .demo .demo-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+section .demo .demo-text h1 {
+  font-weight: 900;
+}
+section .demo .demo-text a {
+  color: #c42c18;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+section .demo .item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+section .demo .item:hover .item-imgbox {
+  -webkit-box-shadow: 0px 0px 15px 7px rgba(219, 130, 89, 0.6509803922);
+          box-shadow: 0px 0px 15px 7px rgba(219, 130, 89, 0.6509803922);
+  -webkit-animation: shake 0.8s ease-in-out infinite alternate;
+          animation: shake 0.8s ease-in-out infinite alternate;
+}
+section .demo .item .item-imgbox {
+  -webkit-box-shadow: 3px 3px 10px 5px #e6d9c9;
+          box-shadow: 3px 3px 10px 5px #e6d9c9;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+section .demo .item .item-imgbox img {
+  width: 100%;
+}
+section .demo .item .item-text {
+  padding: 1rem 3rem 4rem;
+  position: relative;
+}
+section .demo .item .item-text h2 {
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+section .demo .item .item-text p {
+  padding: 0 1rem;
+  line-height: 2rem;
+}
+section .demo .item .item-text a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #58769c;
+  color: #58769c;
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+}
+section .demo .item .item-text a:hover {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: #58769c;
+}
+
+footer .copyright {
+  background-color: #6393d1;
+  background-image: url(../images/wave001.png);
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  header nav .logo-box {
+    display: block;
+  }
+  header nav .logo-box ul {
+    height: auto;
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav .logo-box ul li {
+    margin: 0.5rem 0;
+  }
+  header nav .list {
+    display: block;
+  }
+  header .head-box .head-text h1 {
+    font-size: 1.5rem;
+  }
+  section .demo .item {
+    border-bottom: 1px solid #093f85;
+  }
+  section .demo .item .item-imgbox {
+    margin-bottom: 1.5rem;
+  }
+  section .demo .item .item-text {
+    padding: 1rem 0.5rem 4rem;
+  }
+  section .demo .item .item-text p {
+    padding: 0 0.3rem;
+    line-height: 2rem;
+  }
+  section .demo .item .item-text a {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
