@@ -6,35 +6,34 @@
 
     let runAniIndex = 0;
 
-    //禁止滑鼠和手機滑動動作
-    disableScroll(function () {
-      // 開放滑鼠和手機滑動動作
-      enableScroll();
-    });
-
+    // //禁止滑鼠和手機滑動動作
+    // disableScroll(function () {
+    //   // 開放滑鼠和手機滑動動作
+    //   enableScroll();
+    // });
 
     // ------------------------------------------------
 
-    function disableScroll(callback) {
-      // 禁止滑鼠滾動事件
-      document.addEventListener("wheel", preventDefaultScroll, { passive: false });
-      // 禁止手機觸摸滑動事件
-      document.addEventListener("touchmove", preventDefaultScroll, { passive: false });
-      setTimeout(function () {
-        callback();
-      }, 4000)
-    }
+    // function disableScroll(callback) {
+    //   // 禁止滑鼠滾動事件
+    //   document.addEventListener("wheel", preventDefaultScroll, { passive: false });
+    //   // 禁止手機觸摸滑動事件
+    //   document.addEventListener("touchmove", preventDefaultScroll, { passive: false });
+    //   setTimeout(function () {
+    //     callback();
+    //   }, 4000)
+    // }
 
-    function enableScroll() {
-      // 啟用滑鼠滾動事件
-      document.removeEventListener("wheel", preventDefaultScroll);
-      // 啟用手機觸摸滑動事件
-      document.removeEventListener("touchmove", preventDefaultScroll);
-    }
+    // function enableScroll() {
+    //   // 啟用滑鼠滾動事件
+    //   document.removeEventListener("wheel", preventDefaultScroll);
+    //   // 啟用手機觸摸滑動事件
+    //   document.removeEventListener("touchmove", preventDefaultScroll);
+    // }
 
-    function preventDefaultScroll(event) {
-      event.preventDefault();
-    }
+    // function preventDefaultScroll(event) {
+    //   event.preventDefault();
+    // }
 
     function runAnimation(callback) {
 
@@ -69,11 +68,13 @@
     // ------------------------------------------------
 
     //執行開場動畫
+    $("body").css("overflow","hidden")
     $(".circle").empty();
     runAnimation(function () {
       $(".preload").addClass("fade");
       setTimeout(function () {
         $(".preload").css("display", "none");
+        $("body").css("overflow","auto")
       }, 1000)
 
     });
