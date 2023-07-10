@@ -1,6 +1,7 @@
 
 ; (function () {
 
+
   //~! index 
   let nav = document.querySelector("nav");
   let header = document.querySelector("header");
@@ -10,6 +11,12 @@
   // console.dir(header.clientHeight);
 
   window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      nav.style.position = "fixed";
+    } else {
+      nav.style.position = "static";
+    }
+
     if (window.scrollY >= header.clientHeight) {
       nav.style.backgroundColor = "#58769ccc";
       nav.style.boxShadow = "0px 2px 15px 8px #ccc";
@@ -20,18 +27,18 @@
   })
 
   window.addEventListener("resize", function () {
-    if(this.window.innerWidth >= 768){
+    if (this.window.innerWidth >= 768) {
       list.style.display = "flex";
-    }else{
+    } else {
       list.style.display = "none";
     }
   })
 
   listBtn.addEventListener("click", function () {
-    if(!listFlag){
+    if (!listFlag) {
       list.style.display = "block";
       listFlag = true;
-    }else{
+    } else {
       list.style.display = "none";
       listFlag = false;
     }
@@ -55,7 +62,7 @@
   function showdata(data) {
     // console.log(data);
     $("#box_H").empty();
-    for(let i=0;i<data.length;i++){
+    for (let i = 0; i < data.length; i++) {
       let strHTML = `
       <div class="col-md-6 col-xl-4 item">
         <div class="card mycard h-100">
@@ -67,7 +74,7 @@
         </div>
       </div>
       `;
-  
+
       $("#box_H").append(strHTML);
     }
   }
@@ -86,7 +93,7 @@
   function showdata_V(data) {
     // console.log(data);
     $("#box_V").empty();
-    for(let i=0;i<data.length;i++){
+    for (let i = 0; i < data.length; i++) {
       let strHTML = `
       <div class="col-md-6 col-xl-4 item">
         <div class="card mycard h-100">
@@ -98,7 +105,7 @@
         </div>
       </div>
       `;
-  
+
       $("#box_V").append(strHTML);
     }
   }

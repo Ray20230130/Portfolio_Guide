@@ -1,3 +1,4 @@
+@import "./preload";
 @import "./Adobe";
 
 
@@ -22,9 +23,9 @@ header {
     align-items: center;
     padding: 0 1rem;
     background-color: #58769c;
-    position: fixed;
+    position: static;
     top: 0;
-    z-index: 99;
+    z-index: 5;
 
     .logo-box {
       display: flex;
@@ -77,7 +78,6 @@ header {
   .head-box {
     width: 100%;
     min-height: 25vh;
-    margin-top: 50px;
     margin-bottom: 3rem;
     background:
       linear-gradient(120deg, #58769c 40%, transparent 30%) center center / 100% 100%,
