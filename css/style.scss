@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #000;
+}
+
 .all-wrap {
   background-image: url(../images/wave001.png);
   background-color: #fcf2e5;
@@ -169,8 +173,16 @@ section {
           line-height: 2rem;
         }
 
+        span{
+          color: #ce0000;
+          a{
+            color: #910000;
+            text-shadow: 1px 1px 1px #a04744;
+          }
+        }
 
-        a {
+
+        &>a {
           text-decoration: none;
           padding: .5rem 1rem;
           border-radius: .5rem;
@@ -241,6 +253,7 @@ footer {
   }
 
   section {
+    margin-bottom: 1rem;
     .demo {
       .item {
         border-bottom: 1px solid #093f85;
@@ -264,6 +277,13 @@ footer {
           }
         }
       }
+    }
+  }
+
+  footer {
+    .copyright {
+      padding: .8rem;
+      font-size: .8rem;
     }
   }
 

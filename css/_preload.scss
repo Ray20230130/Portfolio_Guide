@@ -36,12 +36,26 @@
   }
 
   100% {
-    opacity: 0;
+    opacity: 0.2;
+  }
+}
+
+@keyframes fadeReverse {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
 .fade {
-  animation: fade 1s ease;
+  animation: fade 1.5s ease;
+}
+
+.fadeReverse {
+  animation: fadeReverse .5s ease;
 }
 
 $circle-outer: 250px;
@@ -51,7 +65,7 @@ $circle-outer: 250px;
   background-color: #000;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  // position: absolute;
   z-index: 5;
   .preload-wrap{
     // background-color: beige;
@@ -64,7 +78,8 @@ $circle-outer: 250px;
       width: $circle-outer;
       height: $circle-outer;
       border-radius: 50%;
-      background-color: #fcb4b4;
+      // background-color: #fcb4b4;
+      box-shadow: 0px 0px 155px 100px #7a7a7a6c;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,9 +87,10 @@ $circle-outer: 250px;
       overflow: hidden;
     }
     .squar01 {
-      width: $circle-outer * 0.52;
+      width: $circle-outer * 0.82;
       height: $circle-outer * 0.52;
-      background-color: blueviolet;
+      background-color: #b45eeef1;
+      box-shadow: 0px 0px 155px 100px #b45eeef1;
       position: absolute;
       left: 0;
       top: 0;
@@ -87,7 +103,8 @@ $circle-outer: 250px;
     .squar02 {
       width: $circle-outer * 1.6;
       height: $circle-outer * 0.8;
-      background-color: rgb(85, 226, 160);
+      background-color: #30c4938f;
+      box-shadow: 0px 0px 155px 100px #30c493ec;
       position: absolute;
       left: 100%;
       top: 100%;
@@ -101,13 +118,14 @@ $circle-outer: 250px;
       width: $circle-outer * 0.92;
       height: $circle-outer * 0.92;
       border-radius: 50%;
-      background-color: #be4040;
+      // background-color: #be4040;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 6;
     
-      color: #fff;
+      color: #fff3f3;
+      text-shadow: 2px 2px 2px #a78e9d;
       font-size: $circle-outer * 0.128;
     }
     
